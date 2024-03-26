@@ -8,10 +8,10 @@ const ItemRepo = ({repo, handleRemoveRepo}) =>{
     }
 
     return (  
-        <ItemRepoContainer onClick={handleRemove}>
+        <ItemRepoContainer>
             <h3>{repo.name}</h3>
             <p>{repo.full_name}</p>
-            <a className='remove' href='#' >Remover</a>
+            <a className='remove' onClick={handleRemove} href='#' >Remover</a>
             <a className='look' href={repo.html_url} target='blank'>Ver em outra página</a>
             <hr/>
         </ItemRepoContainer>
